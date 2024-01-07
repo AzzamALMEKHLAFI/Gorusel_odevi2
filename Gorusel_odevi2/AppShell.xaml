@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Gorusel_odevi2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Gorusel_odevi2"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <Border Background="gray"
+                StrokeThickness="0">
+            <Grid ColumnDefinitions="Auto,*"
+                  Padding="25">
+                <Image Grid.Column="0"
+                       Source="foto.png"
+                       Aspect="AspectFill"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label Grid.Column="1"
+                       Text="AZZAM ALMEKHLAFI"
+                       VerticalTextAlignment="Center"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#333333"/>
+
+            </Grid>
+        </Border>
+    </Shell.FlyoutHeader>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        
+        <ShellContent
+        Title="Ana sayfa"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        
+        <ShellContent
+        Title="Kurlar"
+        Icon="exchange.png"
+        ContentTemplate="{DataTemplate local:KurlarSayfasi}"
+        Route="KurlarSayfasi" />
+        
+        <ShellContent
+        Title="Haberler"
+        Icon="news.png "
+        ContentTemplate="{DataTemplate local:HaberlerSayfasi}"
+        Route="HaberlerSayfasi" />
+        
+        <ShellContent
+        Title="Hava Durumu"
+        Icon="hava.png"
+        ContentTemplate="{DataTemplate local:HavaDurumuSayfasi}"
+        Route="HavaDurumuSayfasi" />
+        
+        <ShellContent
+        Title="Yapilacaklar"
+        Icon="task.png"
+        ContentTemplate="{DataTemplate local:task_sayfa}"
+        Route="task_sayfa" />
+        
+        <ShellContent
+        Title="Ayarlar"
+        Icon="setting.png"
+        ContentTemplate="{DataTemplate local:AyarlarSayfasi}"
+        Route="AyarlarSayfasi" />
+
+    </FlyoutItem>
+
+    
+    
+
+</Shell>

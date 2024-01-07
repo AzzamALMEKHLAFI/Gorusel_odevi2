@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorusel_odevi2.HavaDurumuSayfasi"
+             Title="Hava Durumu ">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle" Order="Primary" IconImageSource="add.png" Clicked="OnAddCityClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!-- Header -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Hava Durumu" FontSize="20" TextColor="Black" TextTransform="Uppercase" Margin="0,0,0,10" />
+        </StackLayout>
+
+        <!-- List of Cities -->
+        <ListView x:Name="cityListView" ItemSelected="OnCitySelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowDefinitions="Auto,Auto,*">
+                            <Label Text="{Binding Name}" HorizontalOptions="Center"  TextColor="Black" FontSize="Body" Grid.Row="0" />
+                            <Image Source="{Binding WeatherImage}" HeightRequest="250" WidthRequest="250" Grid.Row="1" />
+                            <ImageButton Source="recycle.png" Clicked="OnDeleteClicked"  CommandParameter="{Binding .}" Grid.Row="3" HeightRequest="50" WidthRequest="50" />
+
+                        </Grid>                                          
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+
+</ContentPage>

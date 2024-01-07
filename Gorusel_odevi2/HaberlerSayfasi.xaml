@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorusel_odevi2.HaberlerSayfasi"
+             Title="HaberlerSayfasi">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Son Dakika" Clicked="OnSonDakikaButtonClicked" />
+            <Button Text="Gündem" Clicked="OnGundemButtonClicked" />
+            <Button Text="Ekonomi" Clicked="OnEkonomiButtonClicked" />
+            <Button Text="Spor" Clicked="OnSporButtonClicked" />
+            <Button Text="Bilim ve Teknoloji" Clicked="OnBilimTeknolojiButtonClicked" />
+        </StackLayout>
+        <!--ItemSelected="OnNewsItemSelected"-->
+        <ListView x:Name="newsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ImageTapCommand}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="{Binding Title}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TitleTapCommand}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="{Binding Summary}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SummaryTapCommand}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="{Binding Link}" IsVisible="False" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Refresh News" Clicked="OnRefreshButtonClicked" />
+        <Button Text="Share News" Clicked="OnShareButtonClicked" />
+    </StackLayout>
+
+</ContentPage>

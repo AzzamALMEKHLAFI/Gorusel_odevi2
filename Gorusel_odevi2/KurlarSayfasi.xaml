@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorusel_odevi2.KurlarSayfasi"
+             Title="KurlarSayfasi">
+    <VerticalStackLayout  HorizontalOptions="Center" Margin="20"  >
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"  >
+
+
+
+
+
+            <Grid BackgroundColor="LightGray" Grid.Row="0" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600"  >
+            <Label Text="Tür"  Grid.Column="0"  TextColor="Red"  Margin="5"   FontSize="22" />
+            <Label Text="Alış" Grid.Column="1"  TextColor="Red"  Margin="5"  FontSize="22"/>
+            <Label Text="Satış"  Grid.Column="2"  TextColor="Red" Margin="5"  FontSize="22"/>
+            <Label Text="Fark"  Grid.Column="3"  TextColor="Red" Margin="5"  FontSize="22"/>
+            <Label Text="Yön"  Grid.Column="4"  TextColor="Red"  Margin="7"  FontSize="22"/>
+
+            </Grid>
+
+
+
+            <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600">
+            <Label Text="Dolar" Grid.Column="0" />
+            <Label Text=""  Grid.Column="1"     x:Name="DolarAlis"/>
+            <Label Text=""  Grid.Column="2"     x:Name="Dolarsatis"/>
+            <Label Text=""  Grid.Column="3"     x:Name="DolarFark"/>
+            <Image   Grid.Column="4"     x:Name="DolarYonu"/>
+            </Grid>
+            <Line BackgroundColor="Gray" HeightRequest="6"  Grid.Row="2"  />
+
+
+            <Grid Grid.Row="3" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600"  >
+                <Label Text="Euro"              Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="EuroAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="Eurosatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="EuroFark"/>
+                <Image   Grid.Column="4"     x:Name="EuroYonu"/> 
+            </Grid>
+
+            <Grid Grid.Row="4" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600"  >
+                <Label Text="Sterlin"       Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="SterlinAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="Sterlinsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="SterlinFark"/>
+                <Image   Grid.Column="4"     x:Name="SterlinYonu"/>
+            </Grid>
+
+            <Label Text="-" TextColor="#F7B548" Grid.Row="5" />
+            <Line BackgroundColor="Gray" HeightRequest="6" Grid.Row="6"  />
+
+
+            <Grid Grid.Row="7" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600" >
+                <Label Text="Gram Altın"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="AltinAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="Altinsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="AltinFark"/>
+                <Image   Grid.Column="4"     x:Name="AltinYonu"/>
+            </Grid>
+
+            <Grid Grid.Row="8" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600" >
+                <Label Text="Çeyrek Altın"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="cAltinAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="cAltinsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="cAltinFark"/>
+                <Image   Grid.Column="4"     x:Name="cAltinYonu"/>
+            </Grid>
+
+            <Grid Grid.Row="9" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600" >
+                <Label Text="Gümüş"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="GumusAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="Gumussatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="GumusFark"/>
+                <Image   Grid.Column="4"     x:Name="GumusYonu"/>
+            </Grid>
+            <Line BackgroundColor="Gray" HeightRequest="6" Grid.Row="10" />
+
+            <Label Text="-" TextColor="#F7B548" Grid.Row="11" />
+
+            <Grid Grid.Row="12" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600" >
+                <Label Text="BTC(USD)"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="BTCAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="BTCsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="BTCFark"/>
+                <Image   Grid.Column="4"     x:Name="BTCYonu"/>
+            </Grid>
+
+            <Grid Grid.Row="13" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600" >
+                <Label Text="ETH(USD)"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="ETHAlis"/>
+                <Label Text=""  Grid.Column="2"     x:Name="ETHsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="ETHFark"/>
+                <Image   Grid.Column="4"     x:Name="ETHYonu"/>
+            </Grid>
+
+            <Line BackgroundColor="Gray" HeightRequest="6" Grid.Row="14"  />
+
+            <Label Text="-" TextColor="#F7B548" Grid.Row="15" />
+            <Grid Grid.Row="16" ColumnDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="65" Margin="5" WidthRequest="600" >
+                <Label Text="BIST 100"  Grid.Column="0" />
+                <Label Text=""  Grid.Column="1"     x:Name="BISTAlis"/> 
+                <Label Text=""  Grid.Column="2"     x:Name="BISTsatis"/>
+                <Label Text=""  Grid.Column="3"     x:Name="BISTFark"/>
+            </Grid>
+
+
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

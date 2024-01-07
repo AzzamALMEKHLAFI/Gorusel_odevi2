@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorusel_odevi2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+              
+            <Label
+                  Text="ÖDEV-2"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <Image
+                Source="foto.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="AZZAM AL-MEKHLAFI"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="21670310160"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Bartın üniversitesi Bilgisayar mühendisliği Bölümü"
+                FontSize="15"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="DİKKAT:Ödevinizi çalışır halde yükleyin."
+                FontSize="15"
+                Margin="5"
+                TextColor="Orange"
+                BackgroundColor="LightGoldenrodYellow"
+                HorizontalOptions="Center" />
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
