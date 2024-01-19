@@ -15,7 +15,11 @@ public partial class KurlarSayfasi : ContentPage
         LoadExchangeRates();
 
     }
+    private void ToolbarItem_Clicked(object sender, EventArgs e)
+    {
+        LoadExchangeRates();
 
+    }
 
     private void LoadExchangeRates()
     {
@@ -251,5 +255,7 @@ public partial class KurlarSayfasi : ContentPage
         public string degisim { get; set; }
     }
 
+    
 
+    
 }

@@ -6,4 +6,13 @@ public partial class AyarlarSayfasi : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Switch_Toggled(object sender, ToggledEventArgs e)
+    {
+        if (e.Value)
+            Application.Current.UserAppTheme = AppTheme.Light;
+        else
+            Application.Current.UserAppTheme = AppTheme.Dark;
+
+    }
 }

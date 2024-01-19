@@ -2,83 +2,61 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gorusel_odevi2.task_sayfa"
-             Title="task_sayfa">
-  
+             Title="Gorev">
+
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ekle"    Order="Primary" IconImageSource="add.png" Clicked="KisiEkleEvent"/>
+        <ToolbarItem Text="Ekle"    Order="Primary" IconImageSource="add.png" Clicked="TaskEkleEvent"/>
         <ToolbarItem Text="Yenile" Order="Primary" IconImageSource="refresh.png" Clicked="ToolbarItem_Clicked"/>
 
     </ContentPage.ToolbarItems>
-    
+
     <ScrollView>
 
-        
+
         <CollectionView x:Name="listTask" SelectionMode="Single" Margin="5">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <SwipeView >
-                        <SwipeView.LeftItems>
-                            <SwipeItems>
-                                <SwipeItem Text="Düzenle" 
-                                           BackgroundColor="Green"
-                                           IconImageSource="editing.png"
-                                           Clicked="KisiDuzenleEvent"
-                                           CommandParameter="{Binding ID}"/>
-
-                            </SwipeItems>
-                        </SwipeView.LeftItems>
-
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem Text="Sil" 
-                                           BackgroundColor="Pink"
-                                           IconImageSource="recycle.png"
-                                           Clicked="KisiSilEvent"
-                                           CommandParameter="{Binding ID}"/>
-                            </SwipeItems>
-                        </SwipeView.RightItems>
+                   
+                      
 
 
                         <Border Background="Transparent" Margin="5">
-                            <Grid ColumnDefinitions="Auto,*,Auto"  RowDefinitions="2*,1*,1*,0.5*">
 
-                                <Border Grid.Column="0" Grid.RowSpan="4" Margin="0,0,4,0">
-                                    <Image Source="{Binding Resim}" WidthRequest="70"   />
-                                </Border>
+                        <VerticalStackLayout HeightRequest="100">
 
-                                <Label Text="{Binding Title}" FontSize="20" Grid.Column="1" Grid.Row="0" />
-                                <Label Text="{Binding Task}" FontSize="12" Grid.Column="1" Grid.Row="1" />
+                                <Label Text="{Binding Title}" FontSize="20" />
+                                <Label Text="{Binding Task}" FontSize="12" />
 
 
-
-                            </Grid>
+                        
+                            
 
                             <FlyoutBase.ContextFlyout>
                                 <MenuFlyout>
                                     <MenuFlyoutItem Text="Düzenle" 
                                                    IconImageSource="edit.png"
-                                                   Clicked="KisiDuzenleEvent"
+                                                   Clicked="TaskDuzenleEvent"
                                                    CommandParameter="{Binding ID}"/>
 
                                     <MenuFlyoutItem Text="Sil" 
                                                    IconImageSource="trash.png"
-                                                   Clicked="KisiSilEvent"
+                                                   Clicked="TaskSilEvent"
                                                    CommandParameter="{Binding ID}"/>
 
 
                                 </MenuFlyout>
                             </FlyoutBase.ContextFlyout>
+                        </VerticalStackLayout>
 
-                        </Border>
-                    </SwipeView>
+                    </Border>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
     </ScrollView>
- 
+
 
 </ContentPage>

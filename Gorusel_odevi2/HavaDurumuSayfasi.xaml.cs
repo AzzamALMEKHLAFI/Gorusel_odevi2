@@ -38,8 +38,7 @@ namespace Gorusel_odevi2
 
                 var cityWeather = new SehirHavaDurumu { Name = sehir };
                 cities.Add(cityWeather);
-               // cityWeather.WeatherWebView.IsVisible = true;
-               // cityWeather.WeatherWebView.Source = new UrlWebViewSource { Url = cityWeather.Source };
+               
             }
             
         }
@@ -51,9 +50,7 @@ namespace Gorusel_odevi2
             {
 
             
-           // weatherWebView.IsVisible = true;
-            //weatherWebView.Source = new UrlWebViewSource { Url = selectedCity.Source };
-           
+         
 
 
             cityListView.SelectedItem = null;
@@ -67,18 +64,19 @@ namespace Gorusel_odevi2
             }
         }
 
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
 
-
+        }
     }
 
-    
+
     public class SehirHavaDurumu
     {
         public string Name { get; set; }
 
         public string WeatherImage => $"https://www.mgm.gov.tr/sunum/tahmin-klasik-5070.aspx?m={Name}&basla=1&bitir=5&rC=111&rZ=fff"; // Replace with the actual URL of the weather image
         public string Source => $"https://www.mgm.gov.tr/sunum/tahmin-klasik-5070.aspx?m={Name}&basla=1&bitir=5&rC=111&rZ=fff";
-        //public WebView WeatherWebView { get; set; } = new WebView();
 
     }
 }

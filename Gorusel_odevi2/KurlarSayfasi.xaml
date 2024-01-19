@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
              x:Class="Gorusel_odevi2.KurlarSayfasi"
-             Title="KurlarSayfasi">
+             Title="doviz">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Order="Primary" IconImageSource="refresh.png" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
     <VerticalStackLayout  HorizontalOptions="Center" Margin="20"  >
+        <Border HeightRequest="400" WidthRequest="650"  Background="Transparent" >
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"  >
 
 
@@ -11,11 +16,11 @@
 
 
             <Grid BackgroundColor="LightGray" Grid.Row="0" ColumnDefinitions="*,*,*,*,*" Margin="5" WidthRequest="600"  >
-            <Label Text="Tür"  Grid.Column="0"  TextColor="Red"  Margin="5"   FontSize="22" />
-            <Label Text="Alış" Grid.Column="1"  TextColor="Red"  Margin="5"  FontSize="22"/>
-            <Label Text="Satış"  Grid.Column="2"  TextColor="Red" Margin="5"  FontSize="22"/>
-            <Label Text="Fark"  Grid.Column="3"  TextColor="Red" Margin="5"  FontSize="22"/>
-            <Label Text="Yön"  Grid.Column="4"  TextColor="Red"  Margin="7"  FontSize="22"/>
+            <Label Text="Tür"  Grid.Column="0"    TextColor="Green"  Margin="5"   FontSize="22" />
+            <Label Text="Alış" Grid.Column="1"    TextColor="Green"  Margin="5"   FontSize="22"/>
+            <Label Text="Satış"  Grid.Column="2"  TextColor="Green" Margin="5"    FontSize="22"/>
+            <Label Text="Fark"  Grid.Column="3"   TextColor="Green" Margin="5"  FontSize="22"/>
+            <Label Text="Yön"  Grid.Column="4"    TextColor="Green"  Margin="7"  FontSize="22"/>
 
             </Grid>
 
@@ -107,5 +112,6 @@
 
 
         </Grid>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Task_BL;
 using Task_EL;
- 
+
 using MyTask = Task_EL.Task;
 
 namespace Gorusel_odevi2
@@ -20,7 +20,7 @@ namespace Gorusel_odevi2
             listTask.ItemsSource = BL.Tasks;
         }
 
-        private async void KisiEkleEvent(object sender, EventArgs e)
+        private async void TaskEkleEvent(object sender, EventArgs e)
         {
             TaskDetayi page = new TaskDetayi()
             {
@@ -30,7 +30,7 @@ namespace Gorusel_odevi2
             await Navigation.PushModalAsync(page, true);
 
         }
-        private async void KisiDuzenleEvent(object sender, EventArgs e)
+        private async void TaskDuzenleEvent(object sender, EventArgs e)
         {
             var ib = sender as MenuItem;
             var task = BL.Tasks.First(o => o.ID == ib.CommandParameter.ToString());
@@ -42,7 +42,7 @@ namespace Gorusel_odevi2
             await Navigation.PushModalAsync(page, true);
         }
 
-        private async void KisiSilEvent(object sender, EventArgs e)
+        private async void TaskSilEvent(object sender, EventArgs e)
         {
             var ib = sender as MenuItem;
             var task = BL.Tasks.First(o => o.ID == ib.CommandParameter.ToString());
@@ -73,8 +73,8 @@ namespace Gorusel_odevi2
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-
-            if (!BL.KisileriYukle(ref message))
+            BL.Tasks.Clear();
+                if (!BL.KisileriYukle(ref message))
                 DisplayAlert("Error", message, "Cancel");
             listTask.ItemsSource = BL.Tasks;
         }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorusel_odevi2.Haberler"
+             Title="Haberler">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="refresh.png" Order="Primary" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <Grid RowDefinitions="Auto,*">
+        <CollectionView x:Name="category" Grid.Row="0" SelectionMode="Single" SelectionChanged="category_SelectionChanged">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="baslik" Text="{Binding Baslik}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <CollectionView x:Name="lsHaberler"  Grid.Row="1" SelectionMode="Single" SelectionChanged="lsHaberler_metot">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="18"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Transparent" HeightRequest="700" >
+                        <StackLayout Padding="10" HorizontalOptions="Center"   >
+                        <Image Source="{Binding enclosure.link}"/>
+                        <Label Text="{Binding title}"/>
+                        <HorizontalStackLayout >
+                            <Label Text="{Binding author}"/>
+                            <Label Text="    |   "/>
+                            <Label Text="{Binding pubDate}"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

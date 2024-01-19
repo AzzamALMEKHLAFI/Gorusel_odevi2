@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gorusel_odevi2.HavaDurumuSayfasi"
              Title="Hava Durumu ">
-
-    <ContentPage.ToolbarItems>
+        <ContentPage.ToolbarItems>
         <ToolbarItem Text="Ekle" Order="Primary" IconImageSource="add.png" Clicked="OnAddCityClicked" />
+        <ToolbarItem Text="Yenile" Order="Primary" IconImageSource="refresh.png" Clicked="ToolbarItem_Clicked"/>
+
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
+   
+            <StackLayout>
         <!-- Header -->
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <Label Text="Hava Durumu" FontSize="20" TextColor="Black" TextTransform="Uppercase" Margin="0,0,0,10" />
@@ -22,7 +24,7 @@
                         <Grid RowDefinitions="Auto,Auto,*">
                             <Label Text="{Binding Name}" HorizontalOptions="Center"  TextColor="Black" FontSize="Body" Grid.Row="0" />
                             <Image Source="{Binding WeatherImage}" HeightRequest="250" WidthRequest="250" Grid.Row="1" />
-                            <ImageButton Source="recycle.png" Clicked="OnDeleteClicked"  CommandParameter="{Binding .}" Grid.Row="3" HeightRequest="50" WidthRequest="50" />
+                            <ImageButton Source="recycle111.png" Clicked="OnDeleteClicked"  CommandParameter="{Binding .}" Grid.Row="3" HeightRequest="50" WidthRequest="50" />
 
                         </Grid>                                          
                     </ViewCell>
@@ -32,5 +34,6 @@
 
 
     </StackLayout>
+
 
 </ContentPage>

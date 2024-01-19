@@ -2,15 +2,15 @@ using Task_EL;
 using MyTask = Task_EL.Task;
 
 namespace Gorusel_odevi2
-{ 
-public partial class TaskDetayi : ContentPage
 {
-        
+    public partial class TaskDetayi : ContentPage
+    {
 
-    public bool Result = false;
-    public MyTask mTask = null;
-    bool edit = false;
-    public Action<MyTask> AddMethod = null;
+
+        public bool Result = false;
+        public MyTask mTask = null;
+        bool edit = false;
+        public Action<MyTask> AddMethod = null;
         public TaskDetayi(MyTask task = null)
         {
             InitializeComponent();
@@ -31,24 +31,28 @@ public partial class TaskDetayi : ContentPage
             }
         }
 
-            private void OKClicked(object sender, EventArgs e)
+        private void OKClicked(object sender, EventArgs e)
+        {
+            Result = true;
+            mTask.Title = txttitle.Text;
+            mTask.Note = txtnote.Text;
+
+
             {
-                Result = true;
-                mTask.Title = txttitle.Text;
-                mTask.Note = txtnote.Text;
-              
-                    if (AddMethod != null)
-                        AddMethod(mTask);
+                if (AddMethod != null)
+                    AddMethod(mTask);
 
-                }
-
-                Navigation.PopModalAsync();
             }
 
-            private void CancelClicked(object sender, EventArgs e)
-            {
-                Result = false;
-                Navigation.PopModalAsync();
-            }
-        
+            Navigation.PopModalAsync();
+        }
+
+
+
+        private void CancelClicked(object sender, EventArgs e)
+        {
+            Result = false;
+            Navigation.PopModalAsync();
+        }
+
 }}

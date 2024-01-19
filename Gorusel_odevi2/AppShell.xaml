@@ -26,7 +26,6 @@
             </Grid>
         </Border>
     </Shell.FlyoutHeader>
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
 
         
         <ShellContent
@@ -37,15 +36,15 @@
         
         <ShellContent
         Title="Kurlar"
-        Icon="exchange.png"
+        Icon="para.png"
         ContentTemplate="{DataTemplate local:KurlarSayfasi}"
         Route="KurlarSayfasi" />
         
         <ShellContent
         Title="Haberler"
-        Icon="news.png "
-        ContentTemplate="{DataTemplate local:HaberlerSayfasi}"
-        Route="HaberlerSayfasi" />
+        Icon="news.png"
+        ContentTemplate="{DataTemplate local:Haberler}"
+        Route="Haberler" />
         
         <ShellContent
         Title="Hava Durumu"
@@ -65,8 +64,10 @@
         ContentTemplate="{DataTemplate local:AyarlarSayfasi}"
         Route="AyarlarSayfasi" />
 
-    </FlyoutItem>
+       
 
+        
+        
     
     
 

@@ -22,7 +22,7 @@ namespace Task_BL
             }
             return false;
         }
-        
+
         public static bool KisiEkle(MyTask kisi, ref string message)
         {
             Tasks.Clear();
@@ -50,7 +50,7 @@ namespace Task_BL
         {
             if (task != null && DL.DeleteContact(task, ref message))
             {
-                
+
                 return true;
             }
 

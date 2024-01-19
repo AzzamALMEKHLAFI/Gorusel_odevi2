@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
@@ -59,23 +60,22 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\EL\Task_EL.csproj" />
 	  <ProjectReference Include="..\Task_BL\Task_BL.csproj" />
-	  <ProjectReference Include="..\TasK_DL\Task_DL.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="AyarlarSayfasi.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="HaberlerSayfasi.xaml">
+	  <MauiXaml Update="HaberDetay.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Haberler.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="HavaDurumuSayfasi.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="KurlarSayfasi.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="News.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TaskDetayi.xaml">
