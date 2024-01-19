@@ -37,8 +37,6 @@ public partial class TaskDetayi : ContentPage
                 mTask.Title = txttitle.Text;
                 mTask.Note = txtnote.Text;
               
-               
-                {
                     if (AddMethod != null)
                         AddMethod(mTask);
 
